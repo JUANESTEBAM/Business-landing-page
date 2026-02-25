@@ -21,16 +21,6 @@ const galleryImages = [
     title: "Diseño Moderno",
     category: "Diseños"
   },
-  {
-    url: "https://images.pexels.com/photos/1090735/pexels-photo-1090735.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Afeitado Clásico",
-    category: "Barbería"
-  },
-  {
-    url: "https://images.pexels.com/photos/1661268/pexels-photo-1661268.jpeg?auto=compress&cs=tinysrgb&w=800",
-    title: "Estilo Ejecutivo",
-    category: "Cortes"
-  }
 ];
 
 export default function Gallery() {
@@ -56,7 +46,8 @@ export default function Gallery() {
           </a>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 🔥 GRID 2x2 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {galleryImages.map((image, index) => (
             <div
               key={index}
@@ -80,22 +71,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-zinc-400 mb-6">
-            Sigue nuestras redes sociales para ver transformaciones diarias y ofertas exclusivas
-          </p>
-          <div className="flex justify-center gap-4">
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gradient-to-r from-pink-500 to-amber-500 hover:from-pink-600 hover:to-amber-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-2"
-            >
-              <Instagram className="w-5 h-5" />
-              Instagram
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
